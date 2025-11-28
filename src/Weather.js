@@ -16,7 +16,7 @@ function Weather() {
     
     try {
       const response = await fetch(
-        `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}&units=metric`
+        `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}&units=metric`
       );
       
       if (!response.ok) {
@@ -70,7 +70,7 @@ function Weather() {
           
           <div className="weather-main">
             <img
-              src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`}
+              src={`https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`}
               alt={weatherData.weather[0].description}
               className="weather-icon"
             />
